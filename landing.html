@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: skyblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .landing-container {
+            text-align: center;
+            padding: 40px;
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 600px;
+        }
+
+        h1 {
+            font-size: 36px;
+            color: #2575fc;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .user-details {
+            font-size: 18px;
+            color: #333;
+            margin: 15px 0;
+        }
+
+        .logout-button {
+            padding: 12px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #2575fc;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .logout-button:hover {
+            background-color: #6a11cb;
+        }
+
+        .footer {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #333;
+        }
+
+        .footer a {
+            text-decoration: none;
+            color: #2575fc;
+            font-weight: bold;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="landing-container">
+        <h1>Welcome to Your Dashboard!</h1>
+        <div class="user-details">
+            <p><strong>Name:</strong> {{ user.name }}</p>
+            <p><strong>Email:</strong> {{ user.email }}</p>
+        </div>
+        <button class="logout-button" onclick="window.location.href='/logout'">Logout</button>
+        
+        <div class="footer">
+            <p>Want to go back to <a href="/">Register</a> or <a href="/login">Login</a>?</p>
+        </div>
+    </div>
+</body>
+</html>
